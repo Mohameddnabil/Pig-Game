@@ -74,6 +74,10 @@ const ResetGame = function () {
     Players.querySelector('.current-score').textContent = 0;
   }
 
+  document
+    .querySelector(`.player--${CurrentPlayer}`)
+    .classList.remove('player--winner');
+
   if (CurrentPlayer) ChangePlayer();
 
   CurrentPlayer = 0;
